@@ -21,10 +21,10 @@ namespace zcode.AssetBundlePacker
         /// </summary>
         enum emBuildType
         {
-            StandaloneWindows,
+			StandaloneWindows,
+			Mac,
             Android,
             IOS,
-			Mac,
         }
 
         /// <summary>
@@ -551,10 +551,10 @@ namespace zcode.AssetBundlePacker
         {
             GUILayout.Space(3f);
             GUILayout.BeginHorizontal(GUI.skin.FindStyle("flow background"));
-            GUILayout.BeginVertical(GUILayout.Width(this.position.size.x - 200f));
+            GUILayout.BeginVertical(GUILayout.Width(this.position.size.x - 250f));
             gui_multi_select_.Draw(false, true);
             GUILayout.EndVertical();
-            GUILayout.BeginVertical(GUILayout.Width(200f));
+            GUILayout.BeginVertical(GUILayout.Width(250f));
             emAssetBundleNameRule rule;
             bool is_modify_rule = DrawSelectAssetNodeInfo(out rule);
             GUILayout.EndVertical();

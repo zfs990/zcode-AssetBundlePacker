@@ -1,0 +1,15 @@
+ManifestFileVersion: 0
+CRC: 1090148129
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 338e96b8eaa7e41388900ed286eb9c9b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 31d6cfe0d16ae931b73c59d7e0c089c0
+HashAppended: 0
+ClassTypes: []
+Assets:
+- Assets/Scenes/SimpleScene.unity
+Dependencies:
+- /Users/Rasen/GitProject/zcode-AssetBundlePacker/AssetBundle/assets/resources/version_1/models/sphere_ab

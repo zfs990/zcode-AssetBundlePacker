@@ -1,0 +1,26 @@
+ManifestFileVersion: 0
+CRC: 748463920
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: assets/resources/version_1/models/sphere_ab
+      Dependencies: {}
+    Info_1:
+      Name: assets/resources/version_1/simplescene/cube_ab
+      Dependencies: {}
+    Info_2:
+      Name: assets/resources/version_1/simplescene/plane_ab
+      Dependencies: {}
+    Info_3:
+      Name: assets/resources/version_1/text_ab
+      Dependencies: {}
+    Info_4:
+      Name: assets/resources/version_1/texture_ab
+      Dependencies: {}
+    Info_5:
+      Name: assets/scenes/simplescene_ab
+      Dependencies:
+        Dependency_0: assets/resources/version_1/models/sphere_ab
+    Info_6:
+      Name: assets/scenes/simplescene.unityconfig_ab
+      Dependencies: {}
