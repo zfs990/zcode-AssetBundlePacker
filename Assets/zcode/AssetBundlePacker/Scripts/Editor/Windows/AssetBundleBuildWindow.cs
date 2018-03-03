@@ -24,6 +24,7 @@ namespace zcode.AssetBundlePacker
             StandaloneWindows,
             Android,
             IOS,
+			Mac,
         }
 
         /// <summary>
@@ -179,6 +180,9 @@ namespace zcode.AssetBundlePacker
             {
                 if (node.Element == null)
                     return null;
+				if (node.Element.Name == ".DS_Store") {
+					return null;
+				}
 
                 bool is_ignore = node.Element != null && node.Element.Rule == (int)emAssetBundleNameRule.Ignore;
                 GUI.color = is_ignore ? Color.grey : Color.white;
@@ -433,7 +437,9 @@ namespace zcode.AssetBundlePacker
         BuildTarget GetBuildTargetType(emBuildType build_type)
         {
             if (build_type == emBuildType.StandaloneWindows)
-                return BuildTarget.StandaloneWindows;
+				return BuildTarget.StandaloneWindows;
+			else if (build_type == emBuildType.Mac)
+				return BuildTarget.StandaloneOSXUniversal;
             else if (build_type == emBuildType.Android)
                 return BuildTarget.Android;
             else if (build_type == emBuildType.IOS)
@@ -494,7 +500,12 @@ namespace zcode.AssetBundlePacker
             GUILayout.Space(20f);
             bool is_build_win = GUILayout.Button("Windows平台版本 - 打包");
             GUILayout.Space(20f);
-            GUILayout.EndHorizontal();
+			GUILayout.EndHorizontal();
+			GUILayout.BeginHorizontal();
+			GUILayout.Space(20f);
+			bool is_build_mac = GUILayout.Button("Mac平台版本 - 打包");
+			GUILayout.Space(20f);
+			GUILayout.EndHorizontal();
 
             GUILayout.BeginHorizontal();
             GUILayout.Space(20f);
@@ -518,7 +529,11 @@ namespace zcode.AssetBundlePacker
             if (is_build_win)
             {
                 BuildingAssetBundle(emBuildType.StandaloneWindows);
-            }
+			}
+			else if (is_build_mac)
+			{
+				BuildingAssetBundle(emBuildType.Mac);
+			}
             else if (is_build_android)
             {
                 BuildingAssetBundle(emBuildType.Android);

@@ -10,7 +10,7 @@ using System.Collections;
 /// <summary>
 /// 
 /// </summary>
-public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T>
+public abstract class ABSingleton<T> : MonoBehaviour where T : ABSingleton<T>
 {
     /// <summary>
     ///   单例实例

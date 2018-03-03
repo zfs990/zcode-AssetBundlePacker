@@ -17,7 +17,7 @@ namespace zcode.AssetBundlePacker
     /// <summary>
     ///   资源管理器
     /// </summary>
-    public class AssetBundleManager : MonoSingleton<AssetBundleManager>
+    public class AssetBundleManager : ABSingleton<AssetBundleManager>
     {
         /// <summary>
         ///   最新的资源版本
